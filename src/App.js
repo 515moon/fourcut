@@ -231,12 +231,12 @@ function App() {
     setSelected([]);
     setStep('idle');
   };
-
+  
   return (
     <div className="app-container">
       {step === 'idle' && (
         <div className="idle-screen">
-          <h1>📸 동천네컷</h1>
+          <h1>📸 외고네컷</h1>
           <button onClick={startCapture} className="btn-primary">
             사진 찍기(Enter)
           </button>
