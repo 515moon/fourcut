@@ -1,0 +1,155 @@
+/* 전체 레이아웃 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 기본 버튼 스타일 */
+.btn-primary {
+  background: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #3a56c7;
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* idle 화면 */
+.idle-screen {
+  text-align: center;
+}
+
+/* 촬영 화면 */
+.capture-screen {
+  position: relative;
+  text-align: center;
+}
+
+.flash-overlay {
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0.6;
+  transition: opacity 150ms;
+}
+
+.countdown-text {
+  color: red;
+  margin-top: 10px;
+}
+
+/* 선택 화면 */
+.select-screen {
+  display: flex;
+  gap: 40px;
+}
+
+.preview-frame {
+  flex: 1;
+  text-align: center;
+}
+
+.preview-canvas {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.photo-grid {
+  flex: 2;
+}
+
+.hint-text {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.photo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6px;
+}
+
+.photo-item {
+  position: relative;
+  width: 90%; /* grid가 알아서 채움 */
+}
+
+.photo-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.photo-item.selected img {
+  border: 4px solid #00f;
+  transform: scale(1.02);
+}
+
+.photo-number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #999;
+  color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.photo-number.selected {
+  background: #00f;
+}
+
+.photo-order {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: #00f;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* QR 화면 */
+.qr-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.qr-hint {
+  font-size: 16px;
+  color: gray;
+  margin-top: 20px;
+}
+
+.home-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+}
