@@ -231,7 +231,7 @@ function App() {
     setSelected([]);
     setStep('idle');
   };
-  
+
   return (
     <div className="app-container">
       {step === 'idle' && (
@@ -240,6 +240,7 @@ function App() {
           <button onClick={startCapture} className="btn-primary">
             사진 찍기(Enter)
           </button>
+          <h2>사진은 서버에 저장되지 않습니다.</h2>
         </div>
       )}
 
